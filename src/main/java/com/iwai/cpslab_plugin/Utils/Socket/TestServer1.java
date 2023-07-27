@@ -1,0 +1,8 @@
+package com.iwai.cpslab_plugin.Utils.Socket;
+
+public class TestServer1 {
+    public static void main(String[] args) {
+        Server1 s1 = new Server1();
+        s1.runSample();
+    }
+}

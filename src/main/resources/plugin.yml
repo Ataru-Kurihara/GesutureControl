@@ -1,0 +1,15 @@
+name: CpsLab_Plugin
+version: '${project.version}'
+main: com.iwai.cpslab_plugin.CpsLab_Plugin
+api-version: 1.17
+author: ataru
+enable-rcon: true
+commands:
+  cps:
+    description: cps command
+  cps block:
+    description: block
+  cps socket close:
+    description: socket close
+  cps socket open:
+    description: socket open
