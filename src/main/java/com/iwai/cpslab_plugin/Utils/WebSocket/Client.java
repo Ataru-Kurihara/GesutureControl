@@ -75,7 +75,7 @@ public class Client {
                                         } else {
                                             mainThreadBlock.setType(Material.AIR);
                                         }
-                                        y.add(0,-1,0);
+
 //                                        player.setVelocity(new Vector(0, -2, 0));
                                     });
                                 }

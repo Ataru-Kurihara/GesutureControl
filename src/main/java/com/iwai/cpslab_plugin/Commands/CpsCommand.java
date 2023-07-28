@@ -27,7 +27,7 @@ public class CpsCommand implements CommandExecutor {
         Block block = targetLocation.getBlock();
 //        String url = "ws://172.16.0.1:1880/data";
         String url = "ws://172.16.1.27:1880/data";
-//        String url = "ws://133.14.198.238:1880/data";
+//        String url = "ws://133.14.205.70:1880/data";
 
         if (command.getName().equalsIgnoreCase("cps")) {
             if (strings.length == 0) {
@@ -41,6 +41,7 @@ public class CpsCommand implements CommandExecutor {
                         client.connectWebSocket(url, player, plugin);
                     }
                     if (strings[1].equals("close")) {
+                        player.sendMessage("WebSocketを閉じます");
                         client.clientClose();
                     }
                 }

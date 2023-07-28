@@ -1,0 +1,149 @@
+[
+    {
+        "id": "75b17dd86eb94fd1",
+        "type": "tab",
+        "label": "フロー 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "24ba83136b6a61df",
+        "type": "mqtt in",
+        "z": "75b17dd86eb94fd1",
+        "name": "",
+        "topic": "/test",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bad9559a.3fb398",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "0189786951651617",
+                "07bddf5681037ca0"
+            ]
+        ]
+    },
+    {
+        "id": "0189786951651617",
+        "type": "debug",
+        "z": "75b17dd86eb94fd1",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "285fc8d406d2eec1",
+        "type": "aedes broker",
+        "z": "75b17dd86eb94fd1",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "persistence_bind": "memory",
+        "dburl": "",
+        "usetls": false,
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "07bddf5681037ca0",
+        "type": "websocket out",
+        "z": "75b17dd86eb94fd1",
+        "name": "",
+        "server": "21bdabd8.0026e4",
+        "client": "",
+        "x": 400,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e44d6a4c0b2801c9",
+        "type": "websocket in",
+        "z": "75b17dd86eb94fd1",
+        "name": "",
+        "server": "21bdabd8.0026e4",
+        "client": "",
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "7ccfabc7f52e4114"
+            ]
+        ]
+    },
+    {
+        "id": "7ccfabc7f52e4114",
+        "type": "debug",
+        "z": "75b17dd86eb94fd1",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bad9559a.3fb398",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "21bdabd8.0026e4",
+        "type": "websocket-listener",
+        "path": "/data",
+        "wholemsg": "false"
+    }
+]
