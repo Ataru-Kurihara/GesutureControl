@@ -26,7 +26,8 @@ public class CpsCommand implements CommandExecutor {
         Material air = Material.AIR;
         Block block = targetLocation.getBlock();
 //        String url = "ws://172.16.0.1:1880/data";
-        String url = "ws://172.16.1.27:1880/data";
+//        String url = "ws://172.16.1.27:1880/data";
+        String url = "ws://nodered-sandbox.cps.private:1880/data";
 //        String url = "ws://133.14.205.70:1880/data";
 
         if (command.getName().equalsIgnoreCase("cps")) {

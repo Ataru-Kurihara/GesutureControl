@@ -6,6 +6,10 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
+// #include "esp_wpa2.h" //wpa2 library for connections to Enterprise networks
+#define EAP_IDENTITY "20FI035" //学籍番号
+#define EAP_USERNAME "20FI035" //学籍番号
+#define EAP_PASSWORD "Ataru_4101826514" //大学パスワード
 
 TCA9548A I2CMux;                  // Address can be passed into the constructor
 DFRobot_PAJ7620U2 sensor;
@@ -29,17 +33,19 @@ byte gbuf[16];
 // const int mqttPort = 1883;
 const char ssid[] = "CPSLAB_WLX";
 const char password[] = "6bepa8ideapbu";
-const char* mqttHost = "172.16.1.27";
+// const char* mqttHost = "172.16.1.27";
+const char* mqttHost = "nodered-sandbox.cps.private";
 const int mqttPort = 1883;
 // const char ssid[] = "TDU_MRCL_WLAN_DOT1X";
 // const char password[] = "Ataru_4101826514";
-// const char* mqttHost = "133.14.198.238";
+// const char* mqttHost = "133.14.205.70";
 // const int mqttPort = 1883;
 
 const char* topic = "/test";
 char* payload;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
+int counter = 0;
 
 
 uint16_t bswap(byte b[]) {
@@ -220,6 +226,29 @@ void getGesture() {
         delay(100);
     }  
 }
+
+// void connectTDUWiFi() {
+//   Serial.println();
+//   Serial.print("Connecting to network: ");
+//   Serial.println(ssid);
+//   WiFi.disconnect(true);  //disconnect form wifi to set new wifi connection
+//   WiFi.mode(WIFI_STA); //init wifi mode
+//     // Example1 (most common): a cert-file-free eduroam with PEAP (or TTLS)
+//   WiFi.begin(ssid, WPA2_AUTH_PEAP, EAP_IDENTITY, EAP_USERNAME, EAP_PASSWORD);
+  
+//   while (WiFi.status() != WL_CONNECTED) {
+//     delay(500);
+//     Serial.print(".");
+//     counter++;
+//     if(counter>=60){ //after 30 seconds timeout - reset board
+//       ESP.restart();
+//     }
+//   }
+//   Serial.println("");
+//   Serial.println("WiFi connected");
+//   Serial.println("IP address set: "); 
+//   Serial.println(WiFi.localIP()); //print LAN
+// }
 
 void connectWiFi() {
   WiFi.begin(ssid, password);
