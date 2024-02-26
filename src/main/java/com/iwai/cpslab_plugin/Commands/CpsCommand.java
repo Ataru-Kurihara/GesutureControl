@@ -28,11 +28,12 @@ public class CpsCommand implements CommandExecutor {
 //        String url = "ws://172.16.0.1:1880/data";
 //        String url = "ws://172.16.1.27:1880/data";
         String url = "ws://nodered-sandbox.cps.private:1880/data";
+//        String url = "ws://192.168.0.12:1880/data";
 //        String url = "ws://133.14.205.70:1880/data";
 
         if (command.getName().equalsIgnoreCase("cps")) {
             if (strings.length == 0) {
-                player.sendMessage("CPSコマンド一覧");
+                player.sendMessage("CPSコマンド一覧!!");
             } else {
                 if (strings[0].equals("block")) BlockCommand.blockCommand(strings[0], player);
                 if (strings[0].equals("socket")) {

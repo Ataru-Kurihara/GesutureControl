@@ -1,27 +1,18 @@
 package com.iwai.cpslab_plugin.Model;
 
 public class Data {
-    public String type;
-    public Object value;
 
-    public Data(String type, Object value) {
-        this.type = type;
-        this.value = value;
-    }
+    public String gesture_R;
 
-    public String getType() {
-        return type;
-    }
+    public String gesture_L;
+    public String gesture;
+    public int dist;
 
-    public Object getValue() {
-        return value;
-    }
+    public Data(String gesture_R, String gesture_L ,int dist, String gesture) {
+        this.gesture_R = gesture_R;
+        this.gesture_L = gesture_L;
+        this.dist = dist;
+        this.gesture = gesture;
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setValue(Object value) {
-        this.value = value;
     }
 }

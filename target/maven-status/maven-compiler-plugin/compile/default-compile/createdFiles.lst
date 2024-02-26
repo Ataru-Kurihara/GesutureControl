@@ -13,6 +13,8 @@ com/iwai/cpslab_plugin/Utils/BossBarUtil.class
 com/iwai/cpslab_plugin/Utils/WebSocket/Socket.class
 com/iwai/cpslab_plugin/Utils/Http/RequestHandler.class
 com/iwai/cpslab_plugin/Model/Data.class
+com/iwai/cpslab_plugin/GestureProcessor.class
+com/iwai/cpslab_plugin/Utils/Grove/Gesture.class
 com/iwai/cpslab_plugin/Utils/NpcUtil.class
 com/iwai/cpslab_plugin/Utils/WebSocket/MessageCallback.class
 com/iwai/cpslab_plugin/Commands/CpsCommand.class
@@ -24,6 +26,7 @@ com/iwai/cpslab_plugin/Utils/Server/User.class
 com/iwai/cpslab_plugin/HttpExchangeExample.class
 com/iwai/cpslab_plugin/Utils/BlockUtil.class
 com/iwai/cpslab_plugin/Utils/WebSocket/Client2.class
+com/iwai/cpslab_plugin/Utils/PlayerUtil$1.class
 com/iwai/cpslab_plugin/Utils/WebSocket/Server.class
 com/iwai/cpslab_plugin/Utils/EnvsSample/EnvsModel.class
 com/iwai/cpslab_plugin/Utils/PlayerUtil.class
@@ -31,7 +34,9 @@ com/iwai/cpslab_plugin/Utils/Rcon/Example.class
 com/iwai/cpslab_plugin/Utils/Socket/Server1.class
 com/iwai/cpslab_plugin/Commands/WebSocketCommand.class
 com/iwai/cpslab_plugin/Utils/ScoreBordUtil.class
+com/iwai/cpslab_plugin/Utils/ControlMode.class
 com/iwai/cpslab_plugin/Utils/TextUtil.class
 com/iwai/cpslab_plugin/Utils/Http/MyServer.class
 com/iwai/cpslab_plugin/Utils/Redis/RedisPublisher.class
 com/iwai/cpslab_plugin/Utils/Socket/TestClient2.class
+com/iwai/cpslab_plugin/I2C/Gesture.class

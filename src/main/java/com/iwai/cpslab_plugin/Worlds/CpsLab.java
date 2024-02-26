@@ -4,13 +4,11 @@ import com.iwai.cpslab_plugin.CpsLab_Plugin;
 import com.iwai.cpslab_plugin.HttpExchangeExample;
 import com.iwai.cpslab_plugin.Utils.BossBarUtil;
 import com.iwai.cpslab_plugin.Utils.Http.RequestHandler;
+import com.iwai.cpslab_plugin.Utils.PlayerUtil;
 import com.iwai.cpslab_plugin.Utils.Rcon.Example;
 import com.iwai.cpslab_plugin.Utils.ScoreBordUtil;
 import com.iwai.cpslab_plugin.Utils.Socket.Server1;
 import com.iwai.cpslab_plugin.Utils.TextUtil;
-import com.iwai.cpslab_plugin.Utils.WebSocket.Client;
-import com.iwai.cpslab_plugin.Utils.WebSocket.MessageCallback;
-import net.md_5.bungee.api.ChatMessageType;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
@@ -22,6 +20,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.util.Vector;
 
 import java.io.IOException;
 import java.net.Inet4Address;
@@ -63,21 +62,35 @@ public class CpsLab implements Listener {
         Player player = e.getPlayer();
         World world = player.getWorld();
         Entity entity = e.getRightClicked();
+        Location location = player.getLocation();
+        Vector vector = location.getDirection();
+        int maxDistance = 1;
+        Block block = location.clone().add(vector.multiply(maxDistance)).getBlock();
+        Block mainThreadBlock = block.getWorld().getBlockAt(block.getLocation());
         if (this.world != world) return;
+        player.sendMessage(block.getType().name());
+        player.sendMessage(mainThreadBlock.getType().name());
     }
 
     @EventHandler
     public void onPlayerInteractEvent(PlayerInteractEvent e) throws IOException {
         Player player = e.getPlayer();
         World world = player.getWorld();
+        Location location = player.getLocation();
+        Vector vector = location.getDirection();
+        int maxDistance = 1;
+        Block block = location.clone().add(vector.multiply(maxDistance)).getBlock();
+        Block mainThreadBlock = block.getWorld().getBlockAt(block.getLocation());
         if (this.world != world) return;
         if (e.getAction() == Action.RIGHT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_AIR) {
-            if (player.getInventory().getItemInMainHand().getType().equals(Material.STICK)) {
-                Block block = e.getClickedBlock();
-//                Client client = new Client();
-//                client.connectWebSocket("ws://172.16.0.1:1880/data", player, block);
+            Location playerLocation = player.getLocation();
+            Vector playerDirection = player.getLocation().getDirection();
+            Location direction = playerLocation.clone().add(playerDirection);
 
-            }
+            float deltaYaw = (float) (Math.atan2(direction.getZ(), direction.getX()) * 180 / Math.PI) - 90;
+            float deltaPitch = (float) (Math.asin(direction.getY()) * 180 / Math.PI);
+            player.sendMessage("Clicked");
+            PlayerUtil.PlayerRotation(player, 10, 0);
         }
     }
     @EventHandler

@@ -1,6 +1,8 @@
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/WebSocket/MessageCallback.java
+/Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/ControlMode.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/Redis/RedisSubscriber.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/NpcUtil.java
+/Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/Grove/Gesture.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/WebSocket/Client2.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/EnvsSample/JsonUtils.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/TextUtil.java
@@ -20,6 +22,7 @@
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/HttpExchangeExample.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/WebSocket/Client.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/DataUtil.java
+/Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/I2C/Gesture.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/Http/MyServer.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/EnvsSample/Env.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/BossBarUtil.java
@@ -31,5 +34,6 @@
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/WebSocket/Socket.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/Server/User.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Utils/BlockUtil.java
+/Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/GestureProcessor.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Commands/WebSocketCommand.java
 /Users/akkun/Desktop/iwailab/CpsLab_Plugin/src/main/java/com/iwai/cpslab_plugin/Commands/BlockCommand.java
