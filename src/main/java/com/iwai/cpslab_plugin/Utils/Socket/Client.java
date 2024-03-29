@@ -10,7 +10,7 @@ import java.net.Socket;
 /**
  * ソケット通信(クライアント側)
  */
-public class Client2 {
+public class Client {
     public void runSample() {
 
         Socket cSocket = null;

@@ -16,6 +16,7 @@ import org.bukkit.util.Vector;
 public class CpsCommand implements CommandExecutor {
     Client client;
     private static final CpsLab_Plugin plugin = CpsLab_Plugin.getPlugin(CpsLab_Plugin.class);
+    //自作のコマンドを作成
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         Player player = (Player)commandSender;

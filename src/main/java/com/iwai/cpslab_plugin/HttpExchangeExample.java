@@ -1,16 +1,5 @@
 package com.iwai.cpslab_plugin;
 
-import com.iwai.cpslab_plugin.Utils.Socket.Client2;
-import com.iwai.cpslab_plugin.Worlds.CpsLab;
-import org.bukkit.Bukkit;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.ObjectInputFilter;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
 public class HttpExchangeExample  {
     public static String json = "test json";
 

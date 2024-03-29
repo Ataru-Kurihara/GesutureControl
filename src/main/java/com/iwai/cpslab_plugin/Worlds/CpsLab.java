@@ -1,13 +1,8 @@
 package com.iwai.cpslab_plugin.Worlds;
 
 import com.iwai.cpslab_plugin.CpsLab_Plugin;
-import com.iwai.cpslab_plugin.HttpExchangeExample;
-import com.iwai.cpslab_plugin.Utils.BossBarUtil;
-import com.iwai.cpslab_plugin.Utils.Http.RequestHandler;
 import com.iwai.cpslab_plugin.Utils.PlayerUtil;
-import com.iwai.cpslab_plugin.Utils.Rcon.Example;
-import com.iwai.cpslab_plugin.Utils.ScoreBordUtil;
-import com.iwai.cpslab_plugin.Utils.Socket.Server1;
+
 import com.iwai.cpslab_plugin.Utils.TextUtil;
 import org.bukkit.*;
 import org.bukkit.block.Block;
@@ -23,18 +18,12 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.util.Vector;
 
 import java.io.IOException;
-import java.net.Inet4Address;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 public class CpsLab implements Listener {
-    private static String s;
     CpsLab_Plugin plugin;
     World world;
     Location spawnLocation;
     int spawnX, spawnY, spawnZ;
-
-
 
     public CpsLab(CpsLab_Plugin plugin) {
         this.plugin = plugin;
@@ -46,7 +35,8 @@ public class CpsLab implements Listener {
         this.spawnLocation = new Location(world, spawnX, spawnY, spawnZ);
 
     }
-
+    //プレイヤーがサーバー内のワールド変更をした時に呼び出される
+    //対して使う用途無いので、削除しても問題ない
     @EventHandler
     public void onPlayerChangeWorld(PlayerChangedWorldEvent e) {
         Player player = e.getPlayer();
@@ -56,7 +46,8 @@ public class CpsLab implements Listener {
         player.sendTitle("Welcome to CpsLab", "ようこそ、CpsLabへ", 20, 40, 20);
         TextUtil.summonText(player, 28, 7, 228, "センサに向かって、\n手を押し出す、\n上下に振ってみる、\n左右にゆっくり動かす");
     }
-
+    //プレイヤーがエンティティを右クリックした時に呼び出される
+    //対して使う用途無いので、削除しても問題ない
     @EventHandler
     public void onPlayerInteractEntityEvent(PlayerInteractEntityEvent e) {
         Player player = e.getPlayer();
@@ -71,7 +62,8 @@ public class CpsLab implements Listener {
         player.sendMessage(block.getType().name());
         player.sendMessage(mainThreadBlock.getType().name());
     }
-
+    //プレイヤーがブロックを右クリックした時に呼び出される
+    //対して使う用途無いので、削除しても問題ない
     @EventHandler
     public void onPlayerInteractEvent(PlayerInteractEvent e) throws IOException {
         Player player = e.getPlayer();
@@ -93,6 +85,8 @@ public class CpsLab implements Listener {
             PlayerUtil.PlayerRotation(player, 10, 0);
         }
     }
+    //プレイヤーがブロックを壊そうとした時に呼び出される
+    //ワールド内のブロックを壊せないように制御します
     @EventHandler
     public void onBlockBreakEvent(BlockBreakEvent e) throws IOException {
         Player player = e.getPlayer();

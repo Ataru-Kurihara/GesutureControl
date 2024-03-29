@@ -11,7 +11,7 @@ import java.net.Socket;
 /**
  * ソケット通信(サーバー側)
  */
-public class Server1 {
+public class Server {
 
     public void runSample() {
 
