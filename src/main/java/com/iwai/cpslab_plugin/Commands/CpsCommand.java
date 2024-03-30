@@ -37,6 +37,7 @@ public class CpsCommand implements CommandExecutor {
                 player.sendMessage("CPSコマンド一覧!!");
             } else {
                 if (strings[0].equals("block")) BlockCommand.blockCommand(strings[0], player);
+                // WebSocketを開く
                 if (strings[0].equals("socket")) {
                     if (strings[1].equals("open")) {
                         player.sendMessage("WebSocketを開きます");
